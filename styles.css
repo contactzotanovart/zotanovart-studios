@@ -210,7 +210,7 @@ nav a:hover:after,nav a.active:after{width:22px}
 .artwork-open{display:flex;width:100%;flex-direction:column;align-items:flex-start;padding:0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit}
 .artwork-image{display:grid;place-items:center;width:100%;aspect-ratio:1/1;padding:12px;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
 .artwork-open:hover .artwork-image{transform:translateY(-3px);box-shadow:0 17px 36px var(--shadow)}
-.artwork-image img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px}
+.artwork-image img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
 .artwork-title{margin:13px 0 1px;color:var(--paprika);font:500 1.45rem/1.25 'Playfair Display',serif}
 .artwork-meta{margin:0;color:var(--muted);font-size:.88rem}
 .artwork-dialog{width:min(900px,calc(100% - 32px));max-width:900px;max-height:90vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink);box-shadow:0 25px 80px rgba(64,1,1,.3)}
