@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" role="img" aria-labelledby="title desc">
 <title id="title">Zotanovart Studios</title>
-<desc id="desc">Orange donut ring beside Zotanovart Studios in a chunky Bookman-style serif font matching the supplied reference.</desc>
-<defs><radialGradient id="donut" cx="35%" cy="28%" r="75%"><stop offset="0" stop-color="#f59a3d"/><stop offset="1" stop-color="#df741b"/></radialGradient></defs>
-<circle cx="112" cy="150" r="83" fill="url(#donut)"/>
-<circle cx="112" cy="150" r="35" fill="#fbf1df"/>
-<circle cx="112" cy="150" r="78" fill="none" stroke="#f9b36d" stroke-width="3" opacity=".75"/>
-<g fill="#470000" font-family="'Bookman Old Style','URW Bookman',Georgia,serif" font-weight="bold" letter-spacing="-2.2">
-<text x="210" y="126" font-size="105">Zotanovart</text>
-<text x="210" y="258" font-size="105">Studios</text>
+<desc id="desc">Orange donut ring beside Zotanovart Studios in bold Bookman serif lettering.</desc>
+<defs><radialGradient id="donut" cx="34%" cy="28%" r="75%"><stop offset="0" stop-color="#f59a3d"/><stop offset="1" stop-color="#df741b"/></radialGradient></defs>
+<circle cx="83" cy="155" r="72" fill="url(#donut)"/>
+<circle cx="83" cy="155" r="31" fill="#fbf1df"/>
+<circle cx="83" cy="155" r="68" fill="none" stroke="#f9b36d" stroke-width="2.8" opacity=".75"/>
+<g fill="#470000" font-family="'Bookman Old Style','URW Bookman',Georgia,serif" font-size="85" font-weight="bold" letter-spacing="-1.8">
+<text x="174" y="127">Zotanovart</text>
+<text x="174" y="255">Studios</text>
 </g></svg>
