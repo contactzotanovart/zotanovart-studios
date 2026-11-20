@@ -210,14 +210,14 @@ nav a:hover:after,nav a.active:after{width:22px}
 .artwork-open{display:flex;width:100%;flex-direction:column;align-items:flex-start;padding:0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit}
 .artwork-image{display:grid;place-items:center;width:100%;aspect-ratio:1/1;padding:12px;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
 .artwork-open:hover .artwork-image{transform:translateY(-3px);box-shadow:0 17px 36px var(--shadow)}
-.artwork-image img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.artwork-image img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;object-position:center;border-radius:10px}
 .artwork-title{margin:13px 0 1px;color:var(--paprika);font:500 1.45rem/1.25 'Playfair Display',serif}
 .artwork-meta{margin:0;color:var(--muted);font-size:.88rem}
 .artwork-dialog{width:min(900px,calc(100% - 32px));max-width:900px;max-height:90vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink);box-shadow:0 25px 80px rgba(64,1,1,.3)}
 .artwork-dialog::backdrop{background:rgba(35,12,9,.72);backdrop-filter:blur(3px)}
 .artwork-dialog-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:28px;align-items:center;padding:28px}
-.artwork-dialog-image{display:grid;place-items:center;min-height:250px;background:var(--cream);border-radius:12px;padding:12px}
-.artwork-dialog-image img{display:block;max-width:100%;max-height:72vh;width:auto;height:auto;object-fit:contain;border-radius:6px}
+.artwork-dialog-image{display:grid;place-items:center;min-height:250px;height:min(68vh,650px);background:var(--cream);border-radius:12px;padding:12px;overflow:hidden}
+.artwork-dialog-image img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;object-position:center;border-radius:6px}
 .artwork-dialog-copy h2{margin:8px 0;color:var(--wine);font:500 clamp(2rem,4vw,3rem)/1.1 'Playfair Display',serif}
 .artwork-close{position:absolute;right:12px;top:10px;z-index:1;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--wine);font-size:1.5rem;cursor:pointer}
 @media(max-width:850px){.artwork-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.artwork-dialog-inner{grid-template-columns:1fr}.artwork-dialog-image img{max-height:52vh}}
