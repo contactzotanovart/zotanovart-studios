@@ -6,6 +6,20 @@
 <span class="artwork-meta">Oil on canvas · 5 × 7 inches</span>
 </button>
 </article>
+<article class="artwork-card">
+<button class="artwork-open" type="button" onclick="document.getElementById('artwork-sugar-stardust').showModal()" aria-label="View Sugar &amp; Stardust artwork details">
+<span class="artwork-image"><img src="assets/DSC_0401_neutral_neutral-2.png" alt="Sugar &amp; Stardust, an original oil painting"></span>
+<span class="artwork-title">Sugar &amp; Stardust</span>
+<span class="artwork-meta">Oil on canvas panel · 5 × 5 inches</span>
+</button>
+</article>
+<article class="artwork-card">
+<button class="artwork-open" type="button" onclick="document.getElementById('artwork-strawberry-fields').showModal()" aria-label="View Strawberry Fields Forever artwork details">
+<span class="artwork-image"><img src="assets/Strawberry Fields Forever (Print).webp" alt="Strawberry Fields Forever, an original oil painting"></span>
+<span class="artwork-title">Strawberry Fields Forever</span>
+<span class="artwork-meta">Oil on canvas panel · 8 × 8 inches</span>
+</button>
+</article>
 </div>
 <dialog class="artwork-dialog" id="artwork-sunday-morning" aria-labelledby="sunday-morning-title">
 <div class="artwork-dialog-inner">
@@ -13,4 +27,46 @@
 <div class="artwork-dialog-image"><img src="assets/DSC_0418_neutral-2.png" alt="Sunday Morning, an original oil painting"></div>
 <div class="artwork-dialog-copy"><div class="eyebrow">Original artwork</div><h2 id="sunday-morning-title">Sunday Morning</h2><p class="artwork-meta">Oil on canvas · 5 × 7 inches</p><p>A small original oil painting on canvas.</p></div>
 </div>
-</dialog></div></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><h3>Zotanovart Studios 🍩</h3><p>A little wonder in the everyday.<br>Art, color, and a touch of whimsy.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="shop.html">Shop</a><a href="portfolio.html">Portfolio</a><a href="about.html">About the Artist</a></div></div><div><h3>Say hello</h3><p>For artwork questions, exhibitions, or a friendly hello.</p><a href="contact.html">Visit the contact page →</a></div></div><div class="copyright">© 2026 Zotanovart Studios · Website starter — artwork, shop checkout, and contact form still need to be connected.</div></div></footer></body></html>
+</dialog>
+<dialog class="artwork-dialog" id="artwork-sugar-stardust" aria-labelledby="sugar-stardust-title">
+<div class="artwork-dialog-inner">
+<form method="dialog"><button class="artwork-close" aria-label="Close artwork details">×</button></form>
+<div class="artwork-dialog-image"><img src="assets/DSC_0401_neutral_neutral-2.png" alt="Sugar &amp; Stardust, an original oil painting"></div>
+<div class="artwork-dialog-copy"><div class="eyebrow">Original artwork</div><h2 id="sugar-stardust-title">Sugar &amp; Stardust</h2><p class="artwork-meta">Oil on canvas panel · 5 × 5 inches</p><p>An original oil painting on canvas panel.</p></div>
+</div>
+</dialog>
+<dialog class="artwork-dialog" id="artwork-strawberry-fields" aria-labelledby="strawberry-fields-title">
+<div class="artwork-dialog-inner">
+<form method="dialog"><button class="artwork-close" aria-label="Close artwork details">×</button></form>
+<div>
+<div class="artwork-dialog-image"><img id="strawberry-main-image" src="assets/Strawberry Fields Forever (Print).webp" alt="Strawberry Fields Forever, main artwork image"></div>
+<div class="artwork-thumbnails" aria-label="More views of Strawberry Fields Forever">
+<button type="button" class="artwork-thumbnail active" aria-label="Show print image" aria-pressed="true" data-gallery-image="assets/Strawberry Fields Forever (Print).webp"><img src="assets/Strawberry Fields Forever (Print).webp" alt=""></button>
+<button type="button" class="artwork-thumbnail" aria-label="Show additional image 1" aria-pressed="false" data-gallery-image="assets/Strawberry Fields Forever 1.webp"><img src="assets/Strawberry Fields Forever 1.webp" alt=""></button>
+<button type="button" class="artwork-thumbnail" aria-label="Show additional image 2" aria-pressed="false" data-gallery-image="assets/Strawberry Fields Forever 2.webp"><img src="assets/Strawberry Fields Forever 2.webp" alt=""></button>
+</div>
+</div>
+<div class="artwork-dialog-copy"><div class="eyebrow">Original artwork</div><h2 id="strawberry-fields-title">Strawberry Fields Forever</h2><p class="artwork-meta">Oil on canvas panel · 8 × 8 inches</p><p>An original oil painting on canvas panel, shown here from three views.</p></div>
+</div>
+</dialog>
+<style>
+.artwork-thumbnails{display:flex;gap:10px;margin-top:12px}
+.artwork-thumbnail{width:76px;height:76px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--paper);cursor:pointer;opacity:.72}
+.artwork-thumbnail.active,.artwork-thumbnail:focus-visible{opacity:1;border:2px solid var(--paprika);outline:none}
+.artwork-thumbnail img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:560px){.artwork-thumbnail{width:64px;height:64px}}
+</style>
+<script>
+document.querySelectorAll('.artwork-thumbnail').forEach(function(button){
+  button.addEventListener('click',function(){
+    var gallery=button.closest('dialog');
+    var main=gallery.querySelector('#strawberry-main-image');
+    main.src=button.dataset.galleryImage;
+    gallery.querySelectorAll('.artwork-thumbnail').forEach(function(item){
+      var active=item===button;
+      item.classList.toggle('active',active);
+      item.setAttribute('aria-pressed',String(active));
+    });
+  });
+});
+</script></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><h3>Zotanovart Studios 🍩</h3><p>A little wonder in the everyday.<br>Art, color, and a touch of whimsy.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="shop.html">Shop</a><a href="portfolio.html">Portfolio</a><a href="about.html">About the Artist</a></div></div><div><h3>Say hello</h3><p>For artwork questions, exhibitions, or a friendly hello.</p><a href="contact.html">Visit the contact page →</a></div></div><div class="copyright">© 2026 Zotanovart Studios · Website starter — artwork, shop checkout, and contact form still need to be connected.</div></div></footer></body></html>
