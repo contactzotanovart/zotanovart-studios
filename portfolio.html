@@ -24,7 +24,14 @@
 <dialog class="artwork-dialog" id="artwork-sunday-morning" aria-labelledby="sunday-morning-title">
 <div class="artwork-dialog-inner">
 <form method="dialog"><button class="artwork-close" aria-label="Close artwork details">×</button></form>
-<div class="artwork-dialog-image"><img src="assets/DSC_0418_neutral-2.png" alt="Sunday Morning, an original oil painting"></div>
+<div>
+<div class="artwork-dialog-image"><img src="assets/DSC_0418_neutral-2.png" alt="Sunday Morning, main artwork image"></div>
+<div class="artwork-thumbnails" aria-label="More views of Sunday Morning">
+<button type="button" class="artwork-thumbnail active" aria-label="Show main image" aria-pressed="true" data-gallery-image="assets/DSC_0418_neutral-2.png"><img src="assets/DSC_0418_neutral-2.png" alt=""></button>
+<button type="button" class="artwork-thumbnail" aria-label="Show additional image 1" aria-pressed="false" data-gallery-image="assets/Sunday Morning 1.webp"><img src="assets/Sunday Morning 1.webp" alt=""></button>
+<button type="button" class="artwork-thumbnail" aria-label="Show additional image 2" aria-pressed="false" data-gallery-image="assets/Sunday Morning 2.webp"><img src="assets/Sunday Morning 2.webp" alt=""></button>
+</div>
+</div>
 <div class="artwork-dialog-copy"><div class="eyebrow">Original artwork</div><h2 id="sunday-morning-title">Sunday Morning</h2><p class="artwork-meta">Oil on canvas · 5 × 7 inches</p><p>A small original oil painting on canvas.</p></div>
 </div>
 </dialog>
@@ -60,7 +67,7 @@
 document.querySelectorAll('.artwork-thumbnail').forEach(function(button){
   button.addEventListener('click',function(){
     var gallery=button.closest('dialog');
-    var main=gallery.querySelector('#strawberry-main-image');
+    var main=button.closest('.artwork-thumbnails').previousElementSibling.querySelector('img');
     main.src=button.dataset.galleryImage;
     gallery.querySelectorAll('.artwork-thumbnail').forEach(function(item){
       var active=item===button;
