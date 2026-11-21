@@ -92,8 +92,8 @@ nav a:hover:after,nav a.active:after{width:22px}
 }
 .photo.artist-portrait{min-height:0;padding:0;display:block;overflow:hidden;background:var(--paper)}
 .photo.artist-portrait img{display:block;width:100%;height:auto;border-radius:inherit}
-.photo.featured-artwork{display:grid;place-items:center;width:100%;min-width:0;min-height:0;aspect-ratio:5 / 6;padding:18px;overflow:hidden;background:var(--paper)}
-.photo.featured-artwork img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;border-radius:0;position:relative;z-index:1}
+.photo.featured-artwork{display:grid;place-items:center;width:min(100%,470px);min-width:0;min-height:0;aspect-ratio:5 / 7;margin-left:auto;padding:10px;overflow:hidden;background:var(--paper);border-radius:50% 50% 5px 5px}
+.photo.featured-artwork img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;border-radius:inherit;position:relative;z-index:1}
 .photo:after{
   content:"";position:absolute;inset:9px;border:1px solid #fff1d77a;
   border-radius:inherit;pointer-events:none;
