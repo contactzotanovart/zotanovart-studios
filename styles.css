@@ -157,6 +157,7 @@ nav a:hover:after,nav a.active:after{width:22px}
 .footer p,.footer a{color:#ead2b7;font-size:.86rem}
 .footer-links{display:grid;gap:5px}
 .copyright{border-top:1px solid #8e5d4c;margin-top:30px;padding-top:16px;color:#d1a990;font-size:.72rem}
+.footer-flourish{text-align:center;color:#f6c28d;font-size:1.15rem;letter-spacing:.35em;margin-top:28px;line-height:1.5}
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
 .contact-box{
   background:var(--paprika);color:var(--cream);padding:32px;
